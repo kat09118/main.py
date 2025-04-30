@@ -1,0 +1,31 @@
+#+5
+import random as r 
+
+# Diccionario
+meme_dict = {
+    "CRINGE": "Algo excepcionalmente raro o embarazoso",
+    "LOL": "Una respuesta común a algo gracioso",
+}
+
+# Bucle principal
+for i in range(5):
+    # Solicitud del usuario
+    word = input("Escribe una palabra que no entiendas, en MAYÚSCULAS porfis: ")
+
+    # Condiciones 
+    if word in meme_dict:
+        print(meme_dict[word])
+    else:
+        print("Lo sentimos, esta palabra no se encuentra en nuestro diccionario")
+
+# Extra
+com = input("¿Deseas comprobar lo que aprendiste? (si/no): ")
+
+# Condición 
+if com.lower() == "si":
+    palabra_random = r.choice(list(meme_dict.keys())) 
+    print("¿Cuál es el significado de", palabra_random, "?")
+    respuesta = input("escribe tu respuesta")
+
+elif com.lower()== "no":
+    print("esta bien,sera para la proxima")
